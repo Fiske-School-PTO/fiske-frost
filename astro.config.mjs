@@ -9,5 +9,5 @@ export default defineConfig({
   site: "https://astroship.web3templates.com",
   integrations: [tailwind(), mdx(), sitemap()],
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({imageService:true}),
 });
