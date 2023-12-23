@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import splashImage from "assets/savethedate.jpg";
+// Did this by using this: 
+// https://stackoverflow.com/questions/73937028/how-can-we-use-tailwindcss-to-proportionally-scale-an-image-to-always-fit-within
+---
+<div class="">
+    <div class="flex justify-center h-screen">
+        <Image
+        src={splashImage}
+        alt="Save the Date"
+        class="object-scale-down max-h-full m-auto"
+        />
+    </div>
+</div>
