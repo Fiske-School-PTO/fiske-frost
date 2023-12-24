@@ -1,9 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-export const config = {
-  runtime: 'nodejs', // this is a pre-requisite
-};
-
 // https://developers.cloudflare.com/workers/tutorials/handle-form-submissions-with-airtable/
 // AIRTABLE_ACCESS_TOKEN, AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME is set in the Vercel environment variables
 // https://airtable.com/appNG12MMFNAfvZRK/api/docs#curl/metadata
