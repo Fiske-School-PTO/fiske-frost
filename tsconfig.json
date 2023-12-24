@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "baseUrl": "src",
-    "module": "nodenext",
+    "module": "node16",
     "strictNullChecks": true,
     "types": ["astro/client"],
     "paths": {
