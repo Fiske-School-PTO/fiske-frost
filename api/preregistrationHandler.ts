@@ -11,6 +11,7 @@ export default function handler(
       body: request.body,
       query: request.query,
       cookies: request.cookies,
+      "Testdata":"Test"
     });
   }
 
