@@ -27,8 +27,8 @@ export default function handler(
     }
     const result = createAirtableRecord(process.env, reqBody)
     var recordCreationStatus = "Fail"
-    const {data, errors}: JSONResponse = result.json()
-    if (result.ok){ 
+    console.log(result.status)
+    if (result.ok) { 
       recordCreationStatus = "Pass"
     }
     response.status(200).json({
