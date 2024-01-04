@@ -25,7 +25,7 @@ export default function handler(
         "Child Name": child_name
       }
     }
-    const result = await createAirtableRecord(process.env, reqBody)
+    const result = createAirtableRecord(process.env, reqBody)
     var recordCreationStatus = "Fail"
     if (result.ok){ 
       recordCreationStatus = "Pass"
