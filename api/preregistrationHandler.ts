@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 // https://developers.cloudflare.com/workers/tutorials/handle-form-submissions-with-airtable/
 // AIRTABLE_ACCESS_TOKEN, AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME is set in the Vercel environment variables
 // https://airtable.com/appNG12MMFNAfvZRK/api/docs#curl/metadata
-export default function handler(
+export async default function handler(
     request: VercelRequest,
     response: VercelResponse,
   ) {
@@ -27,7 +27,7 @@ export default function handler(
     }
     const result = createAirtableRecord(process.env, reqBody)
     var recordCreationStatus = "Fail"
-    async console.log("yes I do work!!")
+    console.log("yes I do work!!")
     if (result.ok || (result.status == 304)) {
       recordCreationStatus = "Pass"
     }
