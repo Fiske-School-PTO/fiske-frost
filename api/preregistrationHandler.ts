@@ -7,13 +7,13 @@ export default function handler(
     request: VercelRequest,
     response: VercelResponse,
   ) {
-    parent_1_name = "Arvind"
-    parent_1_phone = "123-456-7890"
-    parent_1_email = "abc@gmail.com"
-    parent_2_name = "Vaidehi"
-    parent_2_phone = "234-567-8901"
-    parent_2_email = "def@gmail.com"
-    child_name = "Keshav"
+    const parent_1_name = "Arvind"
+    const parent_1_phone = "123-456-7890"
+    const parent_1_email = "abc@gmail.com"
+    const parent_2_name = "Vaidehi"
+    const parent_2_phone = "234-567-8901"
+    const parent_2_email = "def@gmail.com"
+    const child_name = "Keshav"
     const reqBody = {
       fields: {
         "Parent 1 Name": parent_1_name,
