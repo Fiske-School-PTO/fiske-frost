@@ -35,7 +35,7 @@ export default function handler(
       body: request.body,
       query: request.query,
       cookies: request.cookies,
-      status: recordCreationStatus,
+      status: result,
     });
   }
 export async function createAirtableRecord(env, body) {
@@ -48,7 +48,8 @@ export async function createAirtableRecord(env, body) {
         'Content-Type': 'application/json', 
       }
     })
-    return result;
+    let json = await result.json();
+    return json;
   } catch (error) {
     console.error(error);
   }
