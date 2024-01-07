@@ -7,6 +7,7 @@ export default function handler(
     request: VercelRequest,
     response: VercelResponse,
   ) {
+    alert(request)
     const parent_1_name = "Arvind"
     const parent_1_phone = "123-456-7890"
     const parent_1_email = "abc@gmail.com"
