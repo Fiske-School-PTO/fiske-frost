@@ -7,7 +7,7 @@ export default function handler(
     request: VercelRequest,
     response: VercelResponse,
   ) {
-    console.log(request)
+    process.stdout.write(request.query)
     /*const parent_1_name = "Arvind"
     const parent_1_phone = "123-456-7890"
     const parent_1_email = "abc@gmail.com"
@@ -17,13 +17,13 @@ export default function handler(
     const child_name = "Keshav"*/
     const reqBody = {
       fields: {
-        "Parent 1 Name": request.,
-        "Parent 1 Phone": parent_1_phone,
-        "Parent 1 Email": parent_1_email,
-        "Parent 2 Name": parent_2_name,
-        "Parent 2 Phone": parent_2_phone,
-        "Parent 2 Email": parent_2_email,
-        "Child Name": child_name
+        "Parent 1 Name": request.query.parent_1_name,
+        "Parent 1 Phone": request.query.parent_1_phone,
+        "Parent 1 Email":request.query.parent_1_email,
+        "Parent 2 Name": request.query.parent_2_name,
+        "Parent 2 Phone": request.query.parent_2_phone,
+        "Parent 2 Email": request.query.parent_2_email,
+        "Child Name": request.query.child_1_name
       }
     }
     const result = createAirtableRecord(process.env, reqBody)
@@ -49,6 +49,8 @@ export async function createAirtableRecord(env, body) {
         'Content-Type': 'application/json', 
       }
     })
+    process.stdout.write("Result")
+    process.stdout.write(result)
     return result;
   } catch (error) {
     console.error(error);
