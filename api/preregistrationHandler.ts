@@ -28,16 +28,14 @@ export default function handler(
     }
     const result = createAirtableRecord(process.env, reqBody)
     var recordCreationStatus = "fail"
-    process.stdout.write("yes I do work!!")
-    if (result.ok || (result.status == 304)) {
+    if (result.ok || (result.status == 304) || (result.status==200)) {
       recordCreationStatus = "pass"
     }
     response.status(200).json({
       body: request.body,
       query: request.query,
       cookies: request.cookies,
-      status: result.status,
-      status2: result.ok,
+      status: recordCreationStatus,
     });
   }
 export async function createAirtableRecord(env, body) {
