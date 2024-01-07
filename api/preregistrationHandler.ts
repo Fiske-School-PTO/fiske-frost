@@ -7,14 +7,7 @@ export default function handler(
     request: VercelRequest,
     response: VercelResponse,
   ) {
-    /*const parent_1_name = "Arvind"
-    const parent_1_phone = "123-456-7890"
-    const parent_1_email = "abc@gmail.com"
-    const parent_2_name = "Vaidehi"
-    const parent_2_phone = "234-567-8901"
-    const parent_2_email = "def@gmail.com"
-    const child_name = "Keshav"*/
-    
+  
     const reqBody = {
       fields: {
         "Parent 1 Name": request.body.parent_1_name,
@@ -57,53 +50,4 @@ export async function createAirtableRecord(env, body) {
     console.error(error);
   }
 }
-  /*
-async function submitHandler (request, env) {
-  if (request.method !== "POST") {
-    return new Response("Method Not Allowed", {
-      status: 405
-    })
-  }
-  const body = await request.formData();
-
-  const {
-    first_name,
-    last_name,
-    email,
-    phone,
-    subject,
-    message
-  } = Object.fromEntries(body)
-
-  // The keys in "fields" are case-sensitive, and
-  // should exactly match the field names you set up
-  // in your Airtable table, such as "First Name".
-  const reqBody = {
-    fields: {
-      "First Name": first_name,
-      "Last Name": last_name,
-      "Email": email,
-      "Phone Number": phone,
-      "Subject": subject,
-      "Message": message
-    }
-  }
-  await createAirtableRecord(env, reqBody)
-}
   
-async function createAirtableRecord(env, body) {
-  try {
-    const result = fetch(`https://api.airtable.com/v0/${env.AIRTABLE_BASE_ID}/${encodeURIComponent(env.AIRTABLE_TABLE_NAME)}`, {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: {
-        Authorization: `Bearer ${env.AIRTABLE_ACCESS_TOKEN}`,
-        'Content-Type': 'application/json', 
-      }
-    })
-    return result;
-  } catch (error) {
-    console.error(error);
-  }
-}
-*/
