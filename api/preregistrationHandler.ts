@@ -14,29 +14,29 @@ export default function handler(
     const parent_2_phone = "234-567-8901"
     const parent_2_email = "def@gmail.com"
     const child_name = "Keshav"
+    */
     const reqBody = {
       fields: {
-        "Parent 1 Name": request.query.parent_1_name,
-        "Parent 1 Phone": request.query.parent_1_phone,
-        "Parent 1 Email":request.query.parent_1_email,
-        "Parent 2 Name": request.query.parent_2_name,
-        "Parent 2 Phone": request.query.parent_2_phone,
-        "Parent 2 Email": request.query.parent_2_email,
-        "Child Name": request.query.child_1_name
+        "Parent 1 Name": request.body.parent_1_name,
+        "Parent 1 Phone": request.body.parent_1_phone,
+        "Parent 1 Email":request.body.parent_1_email,
+        "Parent 2 Name": request.body.parent_2_name,
+        "Parent 2 Phone": request.body.parent_2_phone,
+        "Parent 2 Email": request.body.parent_2_email,
+        "Child Name": request.body.child_1_name
       }
     }
     const result = createAirtableRecord(process.env, reqBody)
-    var recordCreationStatus = "Fail"
+    var recordCreationStatus = "fail"
     process.stdout.write("yes I do work!!")
     if (result.ok || (result.status == 304)) {
-      recordCreationStatus = "Pass"
-    }*/
+      recordCreationStatus = "pass"
+    }
     response.status(200).json({
       body: request.body,
       query: request.query,
       cookies: request.cookies,
-      status: "pass",
-      message: "Record created successfully"
+      status: recordCreationStatus,
     });
   }
 export async function createAirtableRecord(env, body) {

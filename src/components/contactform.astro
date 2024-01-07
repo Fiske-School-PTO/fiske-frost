@@ -186,16 +186,13 @@ import Button from "./ui/button.astro";
     })
       .then(async (response) => {
         let json = await response.json();
+        console.log(response);
         if (response.status == 200) {
-          console.log(json);
-          console.log(response);
           result.classList.add("text-green-500");
-          result.innerHTML = response.json;
+          result.innerHTML = "Record created successfully.";
         } else {
-          console.log(response.status );
-          console.log(response);
           result.classList.add("text-red-500");
-          result.innerHTML = response.json;
+          result.innerHTML = "Failed to create record successfully.";
         }
       })
       .catch((error) => {
