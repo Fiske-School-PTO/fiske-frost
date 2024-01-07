@@ -7,15 +7,15 @@ export default function handler(
     request: VercelRequest,
     response: VercelResponse,
   ) {
-    const parent_1_name = "Arvind"
+    /*const parent_1_name = "Arvind"
     const parent_1_phone = "123-456-7890"
     const parent_1_email = "abc@gmail.com"
     const parent_2_name = "Vaidehi"
     const parent_2_phone = "234-567-8901"
     const parent_2_email = "def@gmail.com"
-    const child_name = "Keshav"
+    const child_name = "Keshav"*/
     
-    /*const reqBody = {
+    const reqBody = {
       fields: {
         "Parent 1 Name": request.body.parent_1_name,
         "Parent 1 Phone": request.body.parent_1_phone,
@@ -25,20 +25,8 @@ export default function handler(
         "Parent 2 Email": request.body.parent_2_email,
         "Child Name": request.body.child_1_name
       }
-    }*/
-
-    const reqBody = {
-      fields: {
-        "Parent 1 Name": parent_1_name,
-        "Parent 1 Phone": parent_1_phone,
-        "Parent 1 Email": parent_1_email,
-        "Parent 2 Name": parent_2_name,
-        "Parent 2 Phone": parent_2_phone,
-        "Parent 2 Email": parent_2_email,
-        "Child Name": child_name
-      }
     }
-    // const result = 
+
     createAirtableRecord(process.env, reqBody)
     .then(result => {
       var recordCreationStatus = "fail"
@@ -52,16 +40,6 @@ export default function handler(
         status: recordCreationStatus,
       });
     })
-    /* var recordCreationStatus = "fail"
-    if (result.ok || (result.status == 304) || (result.status==200)) {
-      recordCreationStatus = "pass"
-    }
-    response.status(200).json({
-      body: request.body,
-      query: request.query,
-      cookies: request.cookies,
-      status: result.toString(),
-    });*/
   }
 export async function createAirtableRecord(env, body) {
   try {
