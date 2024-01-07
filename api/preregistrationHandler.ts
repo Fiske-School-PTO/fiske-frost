@@ -35,7 +35,7 @@ export default function handler(
       body: request.body,
       query: request.query,
       cookies: request.cookies,
-      status: result,
+      status: result.toString(),
     });
   }
 export async function createAirtableRecord(env, body) {
