@@ -189,11 +189,11 @@ import Button from "./ui/button.astro";
         if (response.status == "pass") {
           result.classList.add("text-green-500");
           alert("success")
-          result.innerHTML = json.message;
+          result.innerHTML = response;
         } else {
           console.log(response);
           result.classList.add("text-red-500");
-          result.innerHTML = json.message;
+          result.innerHTML = response;
         }
       })
       .catch((error) => {
