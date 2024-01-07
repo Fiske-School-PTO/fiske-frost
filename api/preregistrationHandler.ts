@@ -38,8 +38,21 @@ export default function handler(
         "Child Name": child_name
       }
     }
-    const result = createAirtableRecord(process.env, reqBody)
-    var recordCreationStatus = "fail"
+    // const result = 
+    createAirtableRecord(process.env, reqBody)
+    .then(result => {
+      var recordCreationStatus = "fail"
+      if (result.ok || (result.status == 304) || (result.status==200)) {
+        recordCreationStatus = "pass"
+      }
+      response.status(200).json({
+        body: request.body,
+        query: request.query,
+        cookies: request.cookies,
+        status: recordCreationStatus,
+      });
+    })
+    /* var recordCreationStatus = "fail"
     if (result.ok || (result.status == 304) || (result.status==200)) {
       recordCreationStatus = "pass"
     }
@@ -48,7 +61,7 @@ export default function handler(
       query: request.query,
       cookies: request.cookies,
       status: result.toString(),
-    });
+    });*/
   }
 export async function createAirtableRecord(env, body) {
   try {
