@@ -35,7 +35,7 @@ export default function handler(
         "Parent 2 Name": parent_2_name,
         "Parent 2 Phone": parent_2_phone,
         "Parent 2 Email": parent_2_email,
-        "Child Name": child_1_name
+        "Child Name": child_name
       }
     }
     const result = createAirtableRecord(process.env, reqBody)
