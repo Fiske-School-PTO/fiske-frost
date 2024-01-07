@@ -7,14 +7,13 @@ export default function handler(
     request: VercelRequest,
     response: VercelResponse,
   ) {
-    process.stdout.write(request.query)
     /*const parent_1_name = "Arvind"
     const parent_1_phone = "123-456-7890"
     const parent_1_email = "abc@gmail.com"
     const parent_2_name = "Vaidehi"
     const parent_2_phone = "234-567-8901"
     const parent_2_email = "def@gmail.com"
-    const child_name = "Keshav"*/
+    const child_name = "Keshav"
     const reqBody = {
       fields: {
         "Parent 1 Name": request.query.parent_1_name,
@@ -31,12 +30,12 @@ export default function handler(
     process.stdout.write("yes I do work!!")
     if (result.ok || (result.status == 304)) {
       recordCreationStatus = "Pass"
-    }
+    }*/
     response.status(200).json({
       body: request.body,
       query: request.query,
       cookies: request.cookies,
-      "status": recordCreationStatus,
+      "status": "Pass"
     });
   }
 export async function createAirtableRecord(env, body) {
