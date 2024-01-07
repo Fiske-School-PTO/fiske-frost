@@ -173,7 +173,6 @@ import Button from "./ui/button.astro";
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-    alert(json)
     result.innerHTML = "Sending...";
 
     fetch("https://www.fiskefrost.com/api/preregistrationHandler", {
@@ -186,7 +185,7 @@ import Button from "./ui/button.astro";
     })
       .then(async (response) => {
         let json = await response.json();
-        console.log(response);
+        console.log(json);
         if (response.status == 200) {
           result.classList.add("text-green-500");
           result.innerHTML = "Record created successfully.";
