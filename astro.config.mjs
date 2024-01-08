@@ -6,7 +6,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site: "https://www.fiskefrost.com/",
   integrations: [tailwind(), mdx(), sitemap()],
   output: 'server',
   adapter: vercel({
