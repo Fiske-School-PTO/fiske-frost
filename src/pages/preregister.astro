@@ -1,0 +1,35 @@
+---
+import Contactform from "@components/contactform.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Fiske Frost</Fragment>
+      <Fragment slot="desc">
+        <span class="block">Pre-register now</span>
+        <span class="block">Secure your spot</span>
+        <span class="block">No financial commitment is needed!</span>
+      </Fragment>
+    </Sectionhead>
+    <div class="mt-4 center text-center">
+      <p class="text-2xl text-slate-300 font-bold">March 22, 2024 - 7 pm onwards</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-8">
+      <div>
+        <Contactform />
+      </div>
+      <div>
+        <p class="text-2xl leading-relaxed text-slate-300">
+          Indulge in a one-of-a-kind evening tailored just for you – a curated experience to rejuvenate and celebrate the community you've helped create. It's time for the adults to relax and connect, and we've designed the perfect night for this much-deserved break. 
+        </p>
+
+      </div>
+
+    </div>
+  </Container>
+</Layout>

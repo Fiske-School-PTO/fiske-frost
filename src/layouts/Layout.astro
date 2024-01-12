@@ -3,7 +3,7 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
-
+import background from "../assets/background.png";
 export interface Props {
   title: string;
 }
@@ -35,11 +35,6 @@ const makeTitle = title
       title={makeTitle}
       description="Fiske Frost"
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
           url: canonicalURL,
@@ -53,7 +48,7 @@ const makeTitle = title
       }}
     />
   </head>
-  <body>
+  <body class="bg-starry">
     <slot />
     <Footer />
     <style is:global>
