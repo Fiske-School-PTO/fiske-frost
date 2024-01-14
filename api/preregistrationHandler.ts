@@ -25,7 +25,7 @@ export default function handler(
       if (result.ok || (result.status == 304) || (result.status==200)) {
         recordCreationStatus = "pass"
       }
-      response.status(200).json({
+      response.status(result.status).json({
         body: request.body,
         query: request.query,
         cookies: request.cookies,
