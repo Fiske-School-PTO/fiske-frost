@@ -11,13 +11,11 @@ export default function handler(
   
     const reqBody = {
       fields: {
-        "Parent 1 Name": request.body.parent_1_name,
-        "Parent 1 Phone": request.body.parent_1_phone,
-        "Parent 1 Email":request.body.parent_1_email,
-        "Parent 2 Name": request.body.parent_2_name,
-        "Parent 2 Phone": request.body.parent_2_phone,
-        "Parent 2 Email": request.body.parent_2_email,
-        "Child Name": request.body.child_1_name
+        "Full Name": request.body.full_name,
+        "Email": request.body.email,
+        "Phone Number":request.body.phone,
+        "Number of adults accompanying you": request.body.number_adults,
+        "Names of adults accompanying you": request.body.names_adults
       }
     }
 
