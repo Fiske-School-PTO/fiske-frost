@@ -3,6 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 // https://developers.cloudflare.com/workers/tutorials/handle-form-submissions-with-airtable/
 // AIRTABLE_ACCESS_TOKEN, AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME is set in the Vercel environment variables
 // https://airtable.com/appNG12MMFNAfvZRK/api/docs#curl/metadata
+// Trying out to push a change using visual studio and git command prompt
 export default function handler(
     request: VercelRequest,
     response: VercelResponse,
