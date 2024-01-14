@@ -44,7 +44,6 @@ export async function createAirtableRecord(env, body) {
         'Content-Type': 'application/json', 
       }
     })
-    // let json = await result.json();
     return result;
   } catch (error) {
     console.error(error);

@@ -13,6 +13,7 @@ import Button from "./ui/button.astro";
   novalidate>
   <div class="mb-5">
     <input
+      id="full_name"
       type="text"
       placeholder="Full Name"
       required
@@ -24,12 +25,12 @@ import Button from "./ui/button.astro";
     </div>
   </div>
   <div class="mb-5">
-    <label for="email_address" class="sr-only">Email Address</label><input
-      id="email_address"
+    <label for="email" class="sr-only">Email Address</label><input
+      id="email"
       type="email"
       placeholder="Email Address"
-      name="email"
       required
+      name="email"
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     />
     <div class="empty-feedback text-red-400 text-sm mt-1">
@@ -40,12 +41,12 @@ import Button from "./ui/button.astro";
     </div>
   </div>
   <div class="mb-5">
-    <label for="phone_number" class="sr-only">Phone Number</label><input
-      id="phone_number"
+    <label for="phone" class="sr-only">Phone Number</label><input
+      id="phone"
       type="phone"
       placeholder="Phone Number"
-      name="phone"
       required
+      name="phone"
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     />
     <div class="empty-feedback text-red-400 text-sm mt-1">
@@ -57,6 +58,7 @@ import Button from "./ui/button.astro";
   </div>
   <div class="mb-5">
     <input
+      id="number_adults"
       type="number"
       placeholder="Number of adults accompanying you"
       required
@@ -69,6 +71,7 @@ import Button from "./ui/button.astro";
   </div>
   <div class="mb-5">
     <input
+      id="names_adults"
       type="text"
       placeholder="Names of adults accompanying you (full_name #1, full name #2, etc)"
       required
