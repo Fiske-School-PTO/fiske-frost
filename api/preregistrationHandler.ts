@@ -14,8 +14,8 @@ export default function handler(
         "Full Name": request.body.full_name,
         "Email": request.body.email,
         "Phone Number":request.body.phone,
-        "Number of adults accompanying you": request.body.number_adults,
-        "Names of adults accompanying you": request.body.names_adults
+        "Number of adults": request.body.number_adults,
+        "Names of adults": request.body.names_adults
       }
     }
 
