@@ -33,6 +33,7 @@ export default function handler(
         cookies: request.cookies,
         status: recordCreationStatus,
       });
+      return result.data;
     })
   }
 export async function createAirtableRecord(env, body) {
