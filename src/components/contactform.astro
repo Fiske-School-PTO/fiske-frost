@@ -132,9 +132,11 @@ import Button from "./ui/button.astro";
         console.log(json);
         if (response.status == 200) {
           result.classList.add("text-green-500");
+          alert("Record created successfully.");
           result.innerHTML = "Record created successfully.";
         } else {
           result.classList.add("text-red-500");
+          alert("Failed to create record successfully.");
           result.innerHTML = "Failed to create record successfully.";
         }
       })
