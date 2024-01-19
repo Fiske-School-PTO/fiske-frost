@@ -6,7 +6,7 @@ import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import SplashLayout from "@layouts/SplashLayout.astro";
 import whiteLogo from "../assets/Fiske Frost logo white.png";
-import starryLogo from "../assets/blue glitter frost logo.png";
+import starryLogo from "../assets/blue glitter frost logo-sm.png";
 
 import { Image } from "astro:assets";
 //export const prerender = true;
@@ -33,15 +33,11 @@ import { Image } from "astro:assets";
     </div>
     <div class="snap-start bg-white w-screen h-screen flex items-center justify-center text-8xl">
       <div class="flex flex-row space-x-4 w-screen mt-10">
-        <div class="text-left w-1/2 ml-2 sm:ml-5 md:ml-10 lg:ml-15 xl:ml-20">
-          <h1 class="text-4xl font-bold">Welcome to</h1>
-          <h1 class="text-4xl font-bold">Fiske Frost</h1>
-          <p class="text-sm md:text-lg mt-5">Fiske PTO's biennial gala is a</p>
-          <p class="text-sm md:text-lg">sophisticated, relaxed, adult-only</p>
-          <p class="text-sm md:text-lg">gathering.  It's your invitation to be</p>
-          <p class="text-sm md:text-lg">part of something unique where</p>
-          <p class="text-sm md:text-lg">community, fun and unity take</p>
-          <p class="text-sm md:text-lg">center stage.</p>
+        <div class="text-left w-1/2 ml-2 sm:ml-5 md:ml-10 lg:ml-15">
+          <div class=" w-auto lg:w-7/12">
+            <h1 class="text-xl md:text-2xl lg:text-3xl lx:text-4xl font-bold text-balance">Welcome to Fiske Frost</h1>
+            <p class="text-sm md:text-xl xl:text-2xl mt-5">Fiske PTO's biennial gala is a sophisticated, relaxed, adult-only gathering.  It's your invitation to be part of something unique where community, fun and unity take center stage.</p>
+          </div>
         </div>
         <div class="items-center justify-center flex flex-col w-1/2">
           <div class="flex justify-center mb-3">
