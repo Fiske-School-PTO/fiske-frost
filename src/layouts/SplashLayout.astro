@@ -1,13 +1,23 @@
 ---
+import { SEO } from "astro-seo";
 import "@fontsource-variable/inter/index.css";
-
+import background from "../assets/background.jpg";
 export interface Props {
   title: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg?20240108",
+  Astro.site
+).toString();
+
 const { title } = Astro.props;
+
+const makeTitle = title
+  ? title + " | " + "2024 Fiske Frost"
+  : "2024 Fiske Frost";
 ---
 
 <!DOCTYPE html>
@@ -17,9 +27,26 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <SEO
+      title={makeTitle}
+      description="Fiske Frost"
+      canonical={canonicalURL}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `2024 Fiske Frost`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Fiske Frost Icon",
+        },
+      }}
+    />
   </head>
-  <body class="bg-starry">
+  <body>
     <slot />
     <style is:global>
       /* Improve Page speed */

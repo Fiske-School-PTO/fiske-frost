@@ -4,10 +4,58 @@ import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
-import Splash from "@components/splash.astro"
 import SplashLayout from "@layouts/SplashLayout.astro";
+import whiteLogo from "../assets/Fiske Frost logo white.png";
+import starryLogo from "../assets/blue glitter frost logo.png";
+
+import { Image } from "astro:assets";
 //export const prerender = true;
 ---
-<SplashLayout title="Splash Page">
-  <Splash />
+<SplashLayout title="Welcome">
+  <div class="snap-y snap-mandatory h-screen overflow-scroll">
+    <div class="snap-start w-screen h-screen flex flex-col items-center justify-center text-2xl bg-starry ">
+      <div class="flex justify-center mb-4">
+        <Image
+        formats={['jpg','webp']}
+        src={whiteLogo}
+        alt="Fiske Frost"
+        class="w-1/3"
+        />
+      </div>
+      <div>
+        <span class="text-white text-lg  sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">community-unity-connection</span>
+      </div>
+      <div class="mt-6">
+        <button class="bg-transparent text-white font-light text-base hover:text-white py-2 px-10 border border-white hover:border-slate-500">
+          <a href="/preregister">PRE-REGISTER</a>
+        </button>
+      </div>
+    </div>
+    <div class="snap-start bg-white w-screen h-screen flex items-center justify-center text-8xl">
+      <div class="flex flex-row space-x-4 w-screen mt-10">
+        <div class="text-left w-1/2 ml-20">
+          <h1 class="text-4xl font-bold">Welcome to</h1>
+          <h1 class="text-4xl font-bold">Fiske Frost</h1>
+          <p class="text-lg mt-5">Fiske PTO's biennial gala is a</p>
+          <p class="text-lg">sophisticated, relaxed, adult-only</p>
+          <p class="text-lg">gathering.  It's your invitation to be</p>
+          <p class="text-lg">part of something unique where</p>
+          <p class="text-lg">community, fun and unity take</p>
+          <p class="text-lg">center stage.</p>
+        </div>
+        <div class="items-center justify-center flex flex-col w-1/2">
+          <div class="flex justify-center mb-3">
+            <Image
+            formats={['jpg','webp']}
+            src={starryLogo}
+            alt="Save the Date"
+            class="w-2/3"
+            />
+            </div>
+          <p class="text-lg">March 22, 2024</p>
+          <p class="text-lg">7 p.m. onwards</p>
+          <p class="text-lg">Cafe Escardille, Burlington, MA </p>
+        </div>
+      </div>
+    </div>
 </SplashLayout>
