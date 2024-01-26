@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import fogarty from "../assets/1-Deborah Fogarty.png";
+import finnegan from "../assets/1-Finnegan.jpeg";
+import kidsborough from "../assets/1-Kidsborough.jpeg";
+import suzanne from "../assets/1-Suzanne.png";
+// Did this by using this:
+// https://stackoverflow.com/questions/73937028/how-can-we-use-tailwindcss-to-proportionally-scale-an-image-to-always-fit-within
+---
+
+<div class="items-center ml-20 mr-20 justify-items-center">
+  <div class="items-center flex flex-col">
+    <h1
+      class="text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-balance">
+      Sponsors
+    </h1>
+    <p class="text-lg mt-5">
+      Fiske School PTO has a simple yet profound mission: to enhance and enrich
+      every student's educational experience at Fiske. The Fiske PTO is proud to
+      allocate over $65,000 - approximately $185 per student this year for the
+      current academic year. Our flagship fundraising event, Fiske Frost, is the
+      cornerstone of our philanthropic endeavors. Through the generous support
+      of sponsors like you, we can fund an array of essential initiatives,
+      including community events, Curriculum Enrichment programs, mini-grants
+      for our dedicated teachers, and the provision of vital resources for our
+      school and classrooms.
+    </p>
+    <h1
+      class="text-2xl md:text-2xl lg:text-3xl lx:text-4xl font-bold text-balance mt-10">
+      Celebrating Our Partners
+    </h1>
+    <div
+      class="flex flex-col lg:flex-row items-center mt-5 justify-items-center justify-center w-full">
+      <div class="grow">
+        <a href="https://www.deborahfogartyhomes.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={fogarty}
+            alt="Save the Date"
+            class="object-scale-down max-h-full m-auto"
+          />
+        </a>
+      </div>
+      <div class="grow">
+        <a href="https://finnegandevelopment.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={finnegan}
+            alt="Save the Date"
+            class="object-scale-down max-h-full m-auto"
+          />
+        </a>
+      </div>
+      <div class="grow">
+        <a href="https://www.kidsborough.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={kidsborough}
+            alt="Save the Date"
+            class="object-scale-down max-h-full m-auto"
+          />
+        </a>
+      </div>
+      <div class="grow">
+        <a href="https://suzanneandcompanyre.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={suzanne}
+            alt="Save the Date"
+            class="object-scale-down max-h-full m-auto"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
