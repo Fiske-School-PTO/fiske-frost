@@ -4,6 +4,18 @@ import fogarty from "../assets/1-Deborah Fogarty.png";
 import finnegan from "../assets/1-Finnegan.jpeg";
 import kidsborough from "../assets/1-Kidsborough.jpeg";
 import suzanne from "../assets/1-Suzanne.png";
+
+import aops from "../assets/2-AoPS.png";
+import bsg from "../assets/2-BSG.jpeg";
+import eaglebank from "../assets/2-Eagle Bank.png";
+import einsteins from "../assets/2-Einsteins.jpeg";
+import kwc from "../assets/2-KWC.png";
+import lexfamilydental from "../assets/2-Lexington Family Dental.jpeg";
+import potdevin from "../assets/2-Potdevin.png";
+import rsm from "../assets/2-RSM.png";
+import capstone from "../assets/3-Capstone Mortgage.png";
+import gervais from "../assets/3-Gervais.png";
+
 // Did this by using this:
 // https://stackoverflow.com/questions/73937028/how-can-we-use-tailwindcss-to-proportionally-scale-an-image-to-always-fit-within
 ---
@@ -12,7 +24,7 @@ import suzanne from "../assets/1-Suzanne.png";
   <div class="items-center flex flex-col">
     <h1
       class="text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-balance">
-      Sponsors
+      Frost Sponsors
     </h1>
     <p class="text-lg mt-5">
       Fiske School PTO has a simple yet profound mission: to enhance and enrich
@@ -30,14 +42,14 @@ import suzanne from "../assets/1-Suzanne.png";
       Celebrating Our Partners
     </h1>
     <div
-      class="flex flex-col lg:flex-row items-center mt-5 justify-items-center justify-center w-full">
+      class="grid grid-cols-4 items-center mt-5 justify-items-center justify-center w-full">
       <div class="grow">
         <a href="https://www.deborahfogartyhomes.com/">
           <Image
             formats={["jpg", "webp"]}
             src={fogarty}
-            alt="Save the Date"
-            class="object-scale-down max-h-full m-auto"
+            alt="Deborah Fogarty"
+            class="object-scale-down max-h-25 m-auto"
           />
         </a>
       </div>
@@ -46,8 +58,8 @@ import suzanne from "../assets/1-Suzanne.png";
           <Image
             formats={["jpg", "webp"]}
             src={finnegan}
-            alt="Save the Date"
-            class="object-scale-down max-h-full m-auto"
+            alt="Finnegan"
+            class="object-scale-down max-h-25 m-auto"
           />
         </a>
       </div>
@@ -56,8 +68,8 @@ import suzanne from "../assets/1-Suzanne.png";
           <Image
             formats={["jpg", "webp"]}
             src={kidsborough}
-            alt="Save the Date"
-            class="object-scale-down max-h-full m-auto"
+            alt="Kidsborough"
+            class="object-scale-down max-h-25 m-auto"
           />
         </a>
       </div>
@@ -66,8 +78,116 @@ import suzanne from "../assets/1-Suzanne.png";
           <Image
             formats={["jpg", "webp"]}
             src={suzanne}
-            alt="Save the Date"
-            class="object-scale-down max-h-full m-auto"
+            alt="Suzanna & Company"
+            class="object-scale-down max-h-25 m-auto"
+          />
+        </a>
+      </div>
+    </div>
+    <h1
+      class="text-2xl md:text-2xl lg:text-3xl lx:text-4xl font-bold text-balance mt-10">
+      Our Audience
+    </h1>
+    <p class="text-sm mt-5">
+      <ul class="text-lg list-disc">
+        <li>490 subscribers (parents and school faculty)</li>
+        <li>231 households and 331 students</li>
+        <li>
+          Five major community events: 2 partial pay-to-play events, and 3 pay
+          to attend events.
+        </li>
+        <li>
+          The newsletter open rate is 150%, and the click-through rate is 17%
+        </li>
+        <li>The email open rate is 173%</li>
+      </ul>
+    </p>
+    <p class="text-lg mt-3">
+      Your support is critical to enabling us to achieve our goals and make a
+      tangible difference in the lives of our students.
+    </p>
+    <div
+    class="grid grid-flow-row auto-cols-auto md:grid-flow-col items-center mt-5 justify-items-center justify-center w-full ">
+      <div class="">
+        <a href="https://artofproblemsolving.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={aops}
+            alt="AoPS"
+            class="object-scale-down max-h-20 m-auto"
+          />
+        </a>
+      </div>
+      <div class="">
+        <a href="https://www.bethsagergroup.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={bsg}
+            alt="Beth Sager Group"
+            class="object-scale-down max-h-20 m-auto"
+          />
+        </a>
+      </div>
+      <div class="">
+        <a href="https://www.bankeagle.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={eaglebank}
+            alt="Eagle Bank"
+            class="object-scale-down max-h-20 m-auto"
+          />
+        </a>
+      </div>
+      <div class="">
+        <a href="https://www.einsteinsworkshop.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={einsteins}
+            alt="Einstein's Workshop"
+            class="object-scale-down max-h-20 m-auto"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+    class="grid grid-flow-row auto-cols-auto md:grid-flow-col items-center mt-5 justify-items-center justify-center w-full ">
+      <div class="">
+        <a href="https://www.massfirm.com//">
+          <Image
+            formats={["jpg", "webp"]}
+            src={kwc}
+            alt="Kajko, Weisman & Colasanti, LLP"
+            class="object-scale-down max-h-20 m-auto"
+          />
+        </a>
+      </div>
+      <div class="">
+        <a href="https://lexfamilydental.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={lexfamilydental}
+            alt="Lexington Family Dental"
+            class="object-scale-down max-h-20 m-auto"
+          />
+        </a>
+      </div>
+      <div class="">
+        <a href="https://www.raveis.com/Agent/jackiepotdevin">
+          <Image
+            formats={["jpg", "webp"]}
+            src={potdevin}
+            alt="Jackie Potdevin Realtor"
+            class="object-scale-down max-h-20 m-auto"
+          />
+        </a>
+      </div>
+      <div class="">
+        <a href="https://www.mathschool.com/locations/lexington">
+          <Image
+            formats={["jpg", "webp"]}
+            src={rsm}
+            alt="RSM"
+            class="object-scale-down max-h-20 m-auto"
           />
         </a>
       </div>
