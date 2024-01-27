@@ -14,7 +14,7 @@ import Sponsors from "@components/sponsors.astro";
 ---
 <SplashLayout title="Welcome">
   <div class="snap-y snap-mandatory h-screen overflow-scroll">
-    <div class="snap-start w-screen h-screen flex flex-col items-center justify-center text-2xl bg-starry">
+    <div class="snap-start min-w-screen min-h-screen flex flex-col items-center justify-center text-2xl bg-starry">
       <div class="flex justify-center mb-4">
         <Image
         formats={['jpg','webp']}
@@ -29,9 +29,9 @@ import Sponsors from "@components/sponsors.astro";
         </button>
       </div>
     </div>
-    <div class="snap-start bg-white w-screen h-screen flex justify-center text-8x overflow-scroll">
-      <div class="items-center flex flex-col-reverse justify-end md:flex-row space-x-4 w-screen mt-10">
-        <div class="mt-10 w-3/4 text-center md:text-left md:w-1/2 md:ml-10 lg:ml-15">
+    <div class="snap-start bg-white min-w-screen min-h-screen flex justify-center text-8x overflow-scroll">
+      <div class="items-center flex flex-col-reverse justify-end md:flex-row space-x-4 w-screen mt-10 ">
+        <div class="mt-10 w-3/4 text-center md:text-left md:w-1/2 md:ml-10 lg:ml-15 pb-10">
           <div class=" w-auto">
             <h1 class="text-2xl md:text-2xl lg:text-3xl lx:text-4xl font-bold text-balance">Welcome to Fiske&nbsp;Frost</h1>
             <p class="text-lg xl:text-xl mt-5">Fiske PTO's Biennial Gala is an exclusive adults-only evening of elegance, camaraderie, and giving back. Our event features a captivating Silent and Live Auction, with every dollar raised contributing directly to the Fiske PTO's mission.</p>
