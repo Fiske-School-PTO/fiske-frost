@@ -13,8 +13,8 @@ import Sponsors from "@components/sponsors.astro";
 //export const prerender = true;
 ---
 <SplashLayout title="Welcome">
-  <div class="snap-y snap-mandatory h-screen overflow-scroll">
-    <div class="snap-start min-w-screen min-h-screen flex flex-col items-center justify-center text-2xl bg-starry">
+  <div class="snap-y md:snap-mandatory md:h-screen overflow-y-scroll">
+    <div class="snap-start w-screen h-screen flex flex-col items-center justify-center text-2xl bg-starry">
       <div class="flex justify-center mb-4">
         <Image
         formats={['jpg','webp']}
@@ -29,17 +29,17 @@ import Sponsors from "@components/sponsors.astro";
         </button>
       </div>
     </div>
-    <div class="snap-end snap-proximity bg-white min-w-screen min-h-screen flex justify-center text-8x overflow-scroll">
-      <div class="items-center flex flex-col-reverse justify-end md:flex-row space-x-4 w-screen mt-10 ">
-        <div class="mt-10 w-3/4 text-center md:text-left md:w-1/2 md:ml-10 lg:ml-15 pb-10">
+    <div class="snap-start bg-white w-screen min-h-screen md:flex md:items-center justify-center mb-16">
+      <div class="items-center flex flex-col-reverse justify-start md:flex-row space-x-4 w-screen">
+        <div class="mt-10 w-3/4 text-left md:w-1/2 md:ml-10 lg:ml-15">
           <div class=" w-auto">
             <h1 class="text-2xl md:text-2xl lg:text-3xl lx:text-4xl font-bold text-balance">Welcome to Fiske&nbsp;Frost</h1>
             <p class="text-lg xl:text-xl mt-5">Fiske PTO's Biennial Gala is an exclusive adults-only evening of elegance, camaraderie, and giving back. Our event features a captivating Silent and Live Auction, with every dollar raised contributing directly to the Fiske PTO's mission.</p>
-            <p class="text-lg xl:text-xl mt-5">These funds are channeled into various initiatives, including enriching our school library collection, empowering teachers through mini-grants, supporting beloved events like the Talent Show and Science Fair, fueling Big Backyard adventures, promoting in-class STEM programming, enhancing our playground equipment, and making the Fiske Fair free for all to attend..</p>
+            <p class="text-lg xl:text-xl mt-5">These funds are channeled into various initiatives, including enriching our school library collection, empowering teachers through mini-grants, supporting beloved events like the Talent Show and Science Fair, fueling Big Backyard adventures, promoting in-class STEM programming, enhancing our playground equipment, and making the Fiske Fair free for all to attend.</p>
             <p class="text-lg xl:text-xl mt-5">Dress in your best cocktail attire, savor the delightful culinary creations from Café Escadrille's renowned kitchen, and immerse yourself in live music. It's an opportunity to hang out with parent friends and Fiske teachers, forge new friendships, and make a significant impact on our beloved Fiske community.</p>
           </div>
         </div>
-        <div class="items-center justify-center flex flex-col w-1/2">
+        <div class="items-center flex flex-col w-1/2 mt-16">
           <div class="flex justify-center mb-3">
             <Image
             formats={['jpg','webp']}
@@ -54,7 +54,4 @@ import Sponsors from "@components/sponsors.astro";
         </div>
       </div>
     </div>
-    <!-- <div class="snap-start bg-white w-screen h-screen flex justify-center text-8xl h-screen">
-      <Sponsors/>
-    </div>   -->
 </SplashLayout>
