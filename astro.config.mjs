@@ -6,6 +6,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
+  server: { host: true},
   site: "https://www.fiskefrost.com/",
   integrations: [tailwind(), mdx(), sitemap()],
   output: 'server',
