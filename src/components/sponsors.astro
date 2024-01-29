@@ -36,7 +36,7 @@ import gervais from "../assets/3-Gervais.png";
       vital resources for our school and classrooms.
     </p>
     <h1
-      class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-balance my-16 text-center"><u>
+      class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-balance my-10 text-center"><u>
       Celebrating Our Partners</u>
     </h1>
     <div
@@ -83,7 +83,7 @@ import gervais from "../assets/3-Gervais.png";
       </div>
     </div>
     <h1
-      class="text-2xl md:text-2xl lg:text-3xl lx:text-4xl font-bold text-balance mt-8 justify-start">
+      class="text-xl md:text-2xl lg:text-2xl lx:text-3xl font-bold text-slate-700  text-balance mt-8 justify-start">
       Our Audience
     </h1>
       <ul class="text-lg list-disc list-inside">
@@ -99,7 +99,7 @@ import gervais from "../assets/3-Gervais.png";
         <li>The email open rate is 173%</li>
       </ul>
     <div
-      class="grid grid-flow-row auto-cols-4 md:grid-flow-col items-center mt-5 justify-items-center justify-center">
+      class="grid grid-flow-row auto-cols-4 md:grid-flow-col md:grid-cols-4  items-center mt-5 justify-items-center justify-center">
       <div class="mr-5 mb-5">
         <a href="https://artofproblemsolving.com/">
           <Image
@@ -142,9 +142,9 @@ import gervais from "../assets/3-Gervais.png";
       </div>
     </div>
     <div
-      class="grid grid-flow-row auto-cols-4 md:grid-flow-col items-center mt-5 justify-items-center justify-center w-full">
+      class="grid grid-flow-row auto-cols-4 md:grid-flow-col md:grid-cols-4 items-center mt-5 justify-items-center justify-center w-full">
       <div class="mr-5 mb-5">
-        <a href="https://www.massfirm.com//">
+        <a href="https://www.massfirm.com/">
           <Image
             formats={["jpg", "webp"]}
             src={kwc}
@@ -179,6 +179,37 @@ import gervais from "../assets/3-Gervais.png";
             formats={["jpg", "webp"]}
             src={rsm}
             alt="RSM"
+            class="object-scale-down max-h-14"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      class="grid grid-flow-row auto-cols-4 md:grid-flow-col md:grid-cols-4 items-center mt-5 justify-items-center justify-center w-full">
+      <div class="mr-5 mb-5 text-center">
+            <span>KELLEX LLC</span>
+      </div>
+      <div class="mr-5 mb-5 text-center">
+        <a href="https://bedfordbuilding.com/">
+            <span>SRAMOWICZ<br/>CONSTRUCTION</span>
+        </a>
+      </div>
+      <div class="mr-5 mb-5">
+        <a href="https://capstonemortgage.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={capstone}
+            alt="Capstone Mortgage"
+            class="object-scale-down max-h-20"
+          />
+        </a>
+      </div>
+      <div class="mr-5 mb-5">
+        <a href="https://gervaisgroup.kw.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={gervais}
+            alt="Gervais Group"
             class="object-scale-down max-h-14"
           />
         </a>
