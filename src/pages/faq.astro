@@ -3,6 +3,28 @@ import SplashLayout from "@layouts/SplashLayout.astro";
 import starryLogo from "../assets/blue glitter frost logo-sm.png";
 import { Image } from "astro:assets";
 ---
+<style>
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
 <SplashLayout title="FAQs">
   <div
     class="snap-start bg-white w-screen md:min-h-screen md:flex md:items-center justify-center">
