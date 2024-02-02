@@ -55,17 +55,29 @@ import Sponsors from "@components/sponsors.astro";
         />
       </div>
       <div class="mt-10 flex flex-col md:flex-row">
+        <button class="bg-transparent text-white font-light text-base hover:text-white py-2 px-10 border border-white hover:border-slate-500 my-3" onclick="location.href='/faq'">FAQ</button>
+        <script is:inline src="https://cdn.tickettailor.com/js/TTWidget.js"></script>
         <button
-          class="bg-transparent text-white font-light text-base hover:text-slate-500 py-2 px-10 border border-white hover:border-slate-500 my-3">
-          <a href="/faq">FAQs</a>
-        </button>
+          class="bg-transparent text-white font-light text-base hover:text-white py-2 px-10 border border-white hover:border-slate-500 md:mx-3 my-3"
+          onclick="TTWidget.loadEvent('fiskeschoolpto',1134151);">
+          BUY TICKETS
+        </button><script is:inline>
+          var PTOWidget = {
+            loadStore: function (boxOffice, eventSeriesId, ref = "widget") {
+              TTWidget.init();
+              var url =
+                "https://www.tickettailor.com/events/" + boxOffice + "/store?ref=" + ref + "&modal_widget=true&widget=true";
+              document.getElementById("tt_widget_overlay_wrapper",).style.display = "block";
+              document.getElementsByTagName("body")[0].style.overflow = "hidden";
+              TTWidget.loadUrl(url);
+              document.getElementsByTagName("body")[0].style.maxHeight = "100%";
+            },
+          };
+        </script>
         <button
-          class="bg-transparent text-white font-light text-base hover:text-slate-500 py-2 px-10 border border-white hover:border-slate-500 md:mx-2 my-3">
-          <a href="/preregister">PRE-REGISTER</a>
-        </button>
-        <button
-          class="bg-transparent text-white font-light text-base hover:text-slate-500 py-2 px-10 border border-white hover:border-slate-500 my-3">
-          <a href="/donate">DONATE TO FISKE STAFF TICKETS</a>
+          class="bg-transparent text-white font-light text-base hover:text-white py-2 px-10 border border-white hover:border-slate-500 my-3"
+          onclick="PTOWidget.loadStore('fiskeschoolpto');">
+          DONATE TO FISKE STAFF TICKETS
         </button>
       </div>
       <div class="w-3/4 text-center h-1 leading-tight mt-8">
