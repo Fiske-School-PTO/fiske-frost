@@ -16,7 +16,6 @@ export default function handler(
         "Phone Number":request.body.phone,
         "Number of adults": request.body.number_adults,
         "Names of adults": request.body.names_adults,
-        "Sample_Query": "abc"
       }
     }
 
