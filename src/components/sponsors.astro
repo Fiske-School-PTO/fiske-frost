@@ -17,6 +17,8 @@ import coppesears from "../assets/2-CoppeandSears.png";
 import albiani from "../assets/2-CatherineAlbiani.jpeg"
 import capstone from "../assets/3-Capstone Mortgage.png";
 import gervais from "../assets/3-Gervais.png";
+import shakerglen from "../assets/3-ShakerGlen.jpg";
+
 
 // Did this by using this:
 // https://stackoverflow.com/questions/73937028/how-can-we-use-tailwindcss-to-proportionally-scale-an-image-to-always-fit-within
@@ -214,7 +216,7 @@ import gervais from "../assets/3-Gervais.png";
       </div>
     </div>
     <div
-      class="grid grid-flow-row auto-cols-2 md:grid-flow-col md:grid-cols-2 items-center mt-2 justify-items-center justify-center w-full">
+      class="grid grid-flow-row auto-cols-3 md:grid-flow-col md:grid-cols-3 items-center mt-2 justify-items-center justify-center w-full">
       <div class="mr-5 mb-5">
         <a href="https://capstonemortgage.com/">
           <Image
@@ -222,6 +224,16 @@ import gervais from "../assets/3-Gervais.png";
             src={capstone}
             alt="Capstone Mortgage"
             class="object-scale-down max-h-16"
+          />
+        </a>
+      </div>
+      <div class="mr-5 mb-5">
+        <a href="https://www.shakerglenconstruction.com/">
+          <Image
+            formats={["jpg", "webp"]}
+            src={shakerglen}
+            alt="Shaker Glen Construction"
+            class="object-scale-down max-h-24"
           />
         </a>
       </div>
